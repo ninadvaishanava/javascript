@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+    function mylang(addlanguage) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(addlanguage));
+      document.querySelector(".language").appendChild(li);
+    }
+    mylang("python");
+    mylang("java");
+    mylang("html");
+    mylang("c++");
+
+    const newli = document.querySelector("li:nth-child(3)");
+    //newli.innerHTML = "script";
+    // const newedit = document.createElement("li");
+    // newedit.textContent = "mojo";
+    // newli.replaceWith(newedit);
+
+    newli.outerHTML = "<li>mongo</li>";
+
+    const lastli = document.querySelector("li:nth-child(2)");
+    lastli.remove();
+  </script>
+</html>
