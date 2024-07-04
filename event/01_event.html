@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <div class="container">
+      <ul id="img">
+        <li>
+          <img width="200px" id="thank" src="73723-thank you powerpoint.png" />
+        </li>
+        <li>
+          <img width="200px" id="hub" src="ezgif-1-be854a9f10.gif" />
+        </li>
+        <li>
+          <img width="200px" id="switch" src="ezgif-1-c13db1aca6.gif" />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="tnk"
+            src="istockphoto-1397892955-612x612.jpg"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //    document.getElementById("thank").addEventListener("click", function(){
+    // alert("this is thanks")
+    //    })
+
+    document.getElementById("img").addEventListener("click", function (e) {
+      console.log(e.target);
+      let removethis = e.target;
+      removethis.remove();
+    });
+  </script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mai hun Groot</h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+  </body>
+
+  <script>
+    const myname = function () {
+      console.log("ninad", Date.now());
+      console.log(new Date());
+    };
+
+    const start = document
+      .querySelector("#start")
+      .addEventListener("click", function () {
+        const int = setInterval(myname, 1000);
+        console.log("start");
+
+        const stop = document
+          .querySelector("#stop")
+          .addEventListener("click", function () {
+            clearInterval(int);
+            console.log("stop");
+          });
+      });
+  </script>
+</html>
