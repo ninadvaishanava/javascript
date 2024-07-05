@@ -21,7 +21,12 @@
   </script> -->
 
   <script>
-    
-
+    function colorhandle(color) {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+    document.querySelector("#orange").onclick = colorhandle("orange");
+    document.querySelector("# blue").onclick = colorhandle("blue");
   </script>
 </html>
